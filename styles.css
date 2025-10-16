@@ -1,0 +1,266 @@
+/* Estilos generales (se actualizaron colores a un esquema elegante de vino/negro) */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;  /* Texto en blanco para contraste con fondo oscuro */
+    background-color: #4C221A;  /* Fondo principal en tono vino elegante */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    animation: fadeBackground 5s infinite;
+}
+
+@keyframes fadeBackground {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+header {
+    background-color: #8B0000;  /* Rojo vino más oscuro para header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.5);  /* Sombra con efecto de luz roja */
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 6px 15px rgba(139, 0, 0, 0.7);  /* Efecto glow al hover */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+    margin: 10px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #2F0C0C;  /* Fondo oscuro para inputs */
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #8B0000;  /* Borde rojo al enfocarse */
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #8B0000;  /* Botón en rojo vino */
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;  /* Agregado efecto de luz */
+}
+
+.search-bar button:hover {
+    background-color: #A52A2A;  /* Rojo más claro para glow */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);  /* Efecto de luz */
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;  /* Efecto de luz en iconos */
+}
+
+.social-icons a:hover {
+    color: #8B0000;
+    text-shadow: 0 0 5px rgba(139, 0, 0, 0.7);  /* Glow rojo */
+}
+
+.cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #8B0000;
+    text-shadow: 0 0 5px rgba(139, 0, 0, 0.7);
+}
+
+.cart-modal {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #2F0C0C;  /* Fondo oscuro para modal */
+    color: white;
+    border: 1px solid #8B0000;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+.categories button {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.categories button:hover {
+    background-color: #A52A2A;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);  /* Efecto de luz */
+}
+
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Productos más grandes */
+    gap: 20px;
+    padding: 20px;
+    animation: fadeInProducts 0.5s ease;
+}
+
+.product {
+    background-color: #2F0C0C;  /* Fondo oscuro para productos */
+    border: 1px solid #8B0000;
+    padding: 15px;  /* Más padding para mayor tamaño */
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 6px 15px rgba(139, 0, 0, 0.5);  /* Efecto glow */
+    transform: translateY(-5px);
+}
+
+.product h3 {
+    color: #8B0000;
+    font-size: 1.2em;  /* Fuente más grande */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);  /* Efecto de luz en imágenes */
+}
+
+.product button {
+    background-color: #8B0000;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #A52A2A;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+footer {
+    background-color: #2F0C0C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(139, 0, 0, 0.5);
+}
+
+footer #footerDescription {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #8B0000;
+    transition: color 0.3s ease;
+}
+
+footer #footerDescription:hover {
+    color: white;
+    text-shadow: 0 0 5px rgba(139, 0, 0, 0.7);  /* Efecto de luz */
+}
+
+footer form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #4C221A;  /* Fondo elegante para formulario */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #8B0000;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);  /* Hacerlo presentable */
+}
+
+footer label {
+    display: block;
+    margin: 10px 0 5px;
+    color: white;
+}
+
+footer input, footer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #8B0000;
+    border-radius: 5px;
+    background-color: #2F0C0C;
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+footer input:focus, footer textarea:focus {
+    border-color: #A52A2A;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);  /* Efecto de luz al enfocarse */
+}
+
+/* Responsive design (sin cambios) */
+@media (max-width: 768px) {
+    .categories {
+        flex-wrap: wrap;
+    }
+    
+    .categories button {
+        margin: 5px;
+        width: 45%;
+    }
+    
+    .products-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Ajuste para responsividad */
+    }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    .search-bar input {
+        width: 80%;
+    }
+}
